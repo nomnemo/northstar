@@ -26,8 +26,8 @@ Resources:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /hello
-            Method: get
+            Path: /hello # the path that gets triggered to call the lambda function
+            Method: get # triggered by an HTTP GET request.
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
