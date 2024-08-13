@@ -15,7 +15,7 @@ export const lambdaHandler = async (event, context) => {
     const response = {
       statusCode: 200,
       body: JSON.stringify({
-        message: '─=≡Σ((((͡≧ ͜ʖ ͡≦)  . . . .  ᕙ( ͡° ͜ʖ ͡°)ᕗ . . .  ʕ◉ᴥ◉ʔ . . . ༼ ͡☉ ͜ʖ ͡☉ ༽',
+        message: 'checking if the aws codepipeline works',
       })
     };
 
