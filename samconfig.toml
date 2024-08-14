@@ -17,6 +17,7 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 resolve_s3 = true
+profile = "personal"  # Specify the AWS profile to use here!
 
 [default.package.parameters]
 resolve_s3 = true
