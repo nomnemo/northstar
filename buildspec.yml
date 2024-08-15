@@ -2,17 +2,16 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 20.x
     commands:
-      - echo Installing dependencies...
+      - npm install -g aws-sam-cli
+      - cd src                # Navigate to the src directory
       - npm install
   build:
     commands:
-      - echo Build started on `date`
-      - npm run build
+      - sam build
   post_build:
     commands:
-      - echo Build completed on `date`
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: yes
+      - sam package --output-template-file packaged.yaml --s3-bucket $S3_BUCKET_NAME
+      - aws cloudformation deploy --template-file packaged.yaml --stack-name $STACK_NAME --capabilities CAPABILITY_IAM
