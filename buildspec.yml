@@ -6,7 +6,9 @@ phases:
       nodejs: 20.x
     commands:
       - npm install -g aws-sam-cli
-      - cd src                # Navigate to the src directory
+      - cd src # Navigate to the src directory
+      - pwd # Print cwd
+      - ls -la # list all files in the directory               
       - npm install
   build:
     commands:
